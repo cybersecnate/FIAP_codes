@@ -14,7 +14,21 @@ public class sort_esgotamento {
             v[i] = entrada.nextInt();
         }
 
-        
+        entrada.close();
+
+        for (int i = 0; i < numero; i++) {
+            for (int j = i+1; j < numero; j++) {
+                if (v[i] > v[j]) {
+                    int c = v[i];
+                    v[i] = v[j];
+                    v[j] = c;
+                }
+            }
+        }
+
+        for (int i : v) {
+            System.out.println(v[i]);
+        }
     }
 }
 
